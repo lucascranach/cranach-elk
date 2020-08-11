@@ -20,7 +20,7 @@ jobs:
       uses: garygrossgarten/github-action-ssh@release
       with:
         command: |
-          cd ${{ secrets.REMOTE_DIR }}cranach-elk
+          cd ${{ secrets.REMOTE_DIR }}cranach-docker
           docker-compose stop elk -d
         host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.SSH_USER }}
@@ -29,7 +29,7 @@ jobs:
       uses: garygrossgarten/github-action-ssh@release
       with:
         command: |
-          cd ${{ secrets.REMOTE_DIR }}cranach-elk
+          cd ${{ secrets.REMOTE_DIR }}cranach-docker
           docker-compose up elk -d
         host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.SSH_USER }}
