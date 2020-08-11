@@ -24,7 +24,7 @@ jobs:
           docker-compose stop elk -d
         host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.SSH_USER }}
-        password: ${{ secrets.PASSWORD }}  
+        password: ${{ secrets.SSH_PASSWORD }}  
     - name: docker-compose stop api -d via OPEN SSH Private Key
       uses: garygrossgarten/github-action-ssh@release
       with:
@@ -33,4 +33,4 @@ jobs:
           docker-compose up elk -d
         host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.SSH_USER }}
-        password: ${{ secrets.PASSWORD }}
+        password: ${{ secrets.SSH_PASSWORD }}
